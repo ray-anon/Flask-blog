@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+    <title>Upload Post</title>
+{% endblock title %}
+{% block content %}
+<div align="center">
+    <h1>Anihub</h1>
+    <br>
+    <h3>Which anime are you watching!</h3>
+</div>
+
+<form method="POST">
+  <div class="mb-3">
+    <label for="caption" class="form-label">Caption</label>
+    <input type="text" class="form-control" id="caption" name="caption" >
+  </div> 
+    <div class="form-floating">
+        <textarea class="form-control" id="text" name="text"></textarea>
+        <label for="text">Keep it short i don't want to store much in my database</label>
+      </div>
+      <br>
+      <div align="center">
+    <button type="submit" class="btn btn-primary">Submit</button>
+</div>
+  </form>
+{% endblock content %}

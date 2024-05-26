@@ -33,7 +33,7 @@ def sign_up():
             login_user(new_user , remember=True)
             flash("New user created" , category='success')
             session['logged_in'] = True
-            #redirect("/")
+            return redirect("/")
     return render_template("signup.html")
 
 @auth.route("/login" , methods=['GET' , 'POST'])

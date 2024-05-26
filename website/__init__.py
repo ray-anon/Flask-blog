@@ -6,7 +6,7 @@ app = Flask(__name__)
 db = SQLAlchemy()
 DB_NAME = 'Database.db'
 def create_app():
-    app.config['SECRET_KEY'] = 'siddikshetty'
+    app.config['SECRET_KEY'] = 'elkbrewr32bekf'
     app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
     from .models import User
     from .views import views

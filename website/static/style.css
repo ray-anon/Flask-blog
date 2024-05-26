@@ -1,27 +1,31 @@
-.box{
+.box {
     display: flex;
-    flex-direction:  column;
+    flex-direction: column;
     text-decoration-line: none;
     width: 600px;
     margin-top: 30px;
     margin-left: 200px;
     border: 5px solid black;
 }
-.firstbox{
+
+.firstbox {
     border-bottom: 2px solid black;
 }
 
-.like{
-    margin-left: 500px;
+.like {
+    margin-left: 450px;
     width: 30px;
 }
 
-.like:hover{
+.like:hover {
     cursor: pointer;
 }
-.secondbox{
+
+.secondbox {
     text-align: center;
 }
-.editbox{
+
+.editbox {
     margin-left: 680px;
 }
+

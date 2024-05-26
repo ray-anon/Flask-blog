@@ -1,6 +1,6 @@
 from flask import Blueprint , render_template , redirect , flash , request
 from flask_login import login_required , current_user
-from .models import Post
+from .models import Post , User
 from . import db
 
 views = Blueprint('views' , __name__)
@@ -44,3 +44,13 @@ def delete(post_id):
     db.session.delete(post)
     db.session.commit()
     return redirect("/")
+
+
+#last thing to do
+@views.route("/user/<name>")
+def user_profile(name):
+    user = User.query.filter_by(username=name).first()
+    if user:
+        return render_template("profile_page.html" , user=user)
+    else:
+        return render_template("404.html")

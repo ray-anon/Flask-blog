@@ -4,6 +4,14 @@
 {% endblock title %}
 {% block content %}
     <div>
-        {{user.username}}
+        <h4>Email -- {{user.email}}</h4>
+        <br>
+        <h4>Username -- {{user.username}}</h4>
+        <br>
+        <h4>Password -- {{user.password}}</h4>
+        <br>
+        <h4>Registered on --{{user.date_created}}</h4>
+        <br>
+        <h4>Number of posts uploaded{{user.posts | count}}</h4>
     </div>
 {% endblock content %}

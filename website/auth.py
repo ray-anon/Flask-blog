@@ -34,7 +34,7 @@ def sign_up():
             flash("New user created" , category='success')
             session['logged_in'] = True
             return redirect("/")
-    return render_template("signup.html")
+    return render_template("signup.html" , user=current_user)
 
 @auth.route("/login" , methods=['GET' , 'POST'])
 def login():
@@ -52,7 +52,7 @@ def login():
                 flash('Password is Incorrect' , category='error')
         else:
             flash('Email is incorrect' , category='error')
-    return render_template("login.html")
+    return render_template("login.html" , user=current_user)
 
 
 #take care of this
